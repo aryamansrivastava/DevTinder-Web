@@ -9,6 +9,11 @@
 - Created BrowserRouter > Routes > Route/ Body > RouteChildren
 - Created an Outlet in Body Component
 - Created a Footer using daisyUi
+- Created a Login Page
+- Install Axios
+- CORS - Install cors in backend => add middleware in app.js to with configuration: origin , credentials:true
+- Whenever making API call so pass axios => {withCredentials:true}
+
 
 ## Body
 
