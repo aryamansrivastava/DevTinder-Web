@@ -1,8 +1,6 @@
-# React + Vite
+# Dev Tinder Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Learned about difference in vite vs cra vs parcel
+- Created a Vite + React Project and Created a hello World app
+- Installed Tailwind Css and DaisyUi
+- Added Navbar Component to App.jsx
