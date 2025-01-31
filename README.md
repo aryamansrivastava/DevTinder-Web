@@ -19,7 +19,8 @@
 - Login and see if your data is coming properly in the store
 - Navbar should update as soon as suer logs in
 - Created Cpmponents folder and add constants file
-
+- You should not access other routes without login
+- If token is not present, redirect user to login page
 
 ## Body
 

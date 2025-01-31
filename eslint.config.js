@@ -7,7 +7,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'], // Added TypeScript file support
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -32,6 +32,10 @@ export default [
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': [
+        'warn', 
+        { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' } // Allows unused variables prefixed with "_"
       ],
     },
   },
