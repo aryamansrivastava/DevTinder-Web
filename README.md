@@ -13,6 +13,12 @@
 - Install Axios
 - CORS - Install cors in backend => add middleware in app.js to with configuration: origin , credentials:true
 - Whenever making API call so pass axios => {withCredentials:true}
+- Installed react-redux and @reduxjs-toolkit
+- Configured store => Provider => createSlice => add reducer to store
+- Add Redux dev tools extension
+- Login and see if your data is coming properly in the store
+- Navbar should update as soon as suer logs in
+- Created Cpmponents folder and add constants file
 
 
 ## Body
