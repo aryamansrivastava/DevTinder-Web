@@ -17,9 +17,9 @@ const Navbar = () => {
     }
     catch(err) {
       // Error logic -> redirect to error page
-      console.error('Logout Error:', err.message);
+      console.error(err);
     }
-  }
+  };
 
   return (
     <div className="navbar bg-base-300">
@@ -53,7 +53,7 @@ const Navbar = () => {
           <a>Settings</a>
           </li>
           <li>
-          <a onClick={handleLogout} >Logout</a>
+          <a onClick={handleLogout}>Logout</a>
           </li>
         </ul>
       </div>
