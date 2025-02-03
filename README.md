@@ -21,6 +21,7 @@
 - Created Cpmponents folder and add constants file
 - You should not access other routes without login
 - If token is not present, redirect user to login page
+- Logout Feature
 
 ## Body
 
