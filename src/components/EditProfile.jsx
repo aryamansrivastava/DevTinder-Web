@@ -31,7 +31,11 @@ const EditProfile = ({ user }) => {
         gender, 
         about,
       }, 
-      { withCredentials: true }
+      { withCredentials: true,
+        headers: {
+        "Content-Type": "application/json",
+        },
+       }
     );
     dispatch(addUser(res?.data?.data)); 
     setShowToast(true);
@@ -40,7 +44,7 @@ const EditProfile = ({ user }) => {
     }, 3000); 
     }
     catch (err) {
-      setError(err.message);
+      setError(err.response?.data?.message || err.message);
     }
   };
 
