@@ -30,6 +30,7 @@
 - Created page to See all my Connection Requests
 - Feature to Accept/Rejec Connection Request
 - Send/Ignore the user Card from the feed
+- Feature Signup New User
 
 ## Body
 
