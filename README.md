@@ -28,6 +28,7 @@
 - Show Toast Message on save of profile
 - Created page to See all my Connections
 - Created page to See all my Connection Requests
+- Feature to Accept/Rejec Connection Request
 
 ## Body
 
