@@ -20,14 +20,14 @@ const EditProfile = ({ user }) => {
     // Clearing errors
     setError("");
     try {
-      const res = await axios.patch(
+      const res = await axios.put(
         BASE_URL + "/profile/edit", 
         {
         firstName, 
         lastName, 
         photoUrl, 
         age, 
-        gender, 
+        gender,
         about,
       }, 
       { withCredentials: true }

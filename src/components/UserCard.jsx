@@ -18,7 +18,8 @@ const UserCard = ({user}) => {
     catch(err) {
       console.log(err);
     }
-  }
+  };
+  
   return (
     <div className="card bg-base-300 w-96 shadow-xl">
         <figure>
