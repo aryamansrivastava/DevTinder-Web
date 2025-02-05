@@ -6,16 +6,15 @@ import {BASE_URL} from "../utils/constants";
 import {addUser} from "../utils/userSlice";
 
 const EditProfile = ({ user }) => {
-  const [firstName, setFirstName] = useState(user?.firstName || "");
+  const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [photoUrl, setphotoUrl] = useState(user.photoUrl);
+  const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
   const [age, setAge] = useState(user.age || "");
   const [gender, setGender] = useState(user.gender || "");
   const [about, setAbout] = useState(user.about || "");
   const [error, setError] = useState("");
-  const [showToast, setShowToast] = useState(false); 
-
   const dispatch = useDispatch();
+  const [showToast, setShowToast] = useState(false); 
  
   const saveProfile = async() => {
     // Clearing errors
@@ -31,11 +30,7 @@ const EditProfile = ({ user }) => {
         gender, 
         about,
       }, 
-      { withCredentials: true,
-        headers: {
-        "Content-Type": "application/json",
-        },
-       }
+      { withCredentials: true }
     );
     dispatch(addUser(res?.data?.data)); 
     setShowToast(true);
@@ -86,7 +81,7 @@ const EditProfile = ({ user }) => {
                 type="text"
                 value={photoUrl}
                 className="input input-bordered w-full max-w-xs"
-                onChange={(e) => setphotoUrl(e.target.value)}
+                onChange={(e) => setPhotoUrl(e.target.value)}
               />
             </label>
             <label className="form-control w-full max-w-xs my-2">
@@ -132,15 +127,17 @@ const EditProfile = ({ user }) => {
         </div>
       </div>
     </div>
-    <UserCard user={{firstName, lastName, photoUrl, age, gender, about}} 
+    <UserCard 
+    user={{firstName, lastName, photoUrl, age, gender, about}} 
     />
   </div>
-  {showToast && 
-  <div className="toast toast-top toast-center">
+  {showToast && (
+    <div className="toast toast-top toast-center">
     <div className="alert alert-success">
       <span>Profile saved successfully.</span>
     </div>
-  </div>}
+  </div>
+  )}
 </> 
   
   );

@@ -17,7 +17,7 @@ const Navbar = () => {
     }
     catch(err) {
       // Error logic -> redirect to error page
-      console.error(err);
+      console.log(err);
     }
   };
 

@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequests, removeRequest } from "../utils/requestSlice";
-import { useEffect } from "react";
+import { useEffect} from "react";
 
 const Requests = () => {
   const requests = useSelector((store) => store.requests);
@@ -26,7 +26,7 @@ const Requests = () => {
       });
       dispatch(addRequests(res.data.data));
     } catch (err) {
-      console.error(err);
+      console.log(err);
     }
   };
 
@@ -35,7 +35,8 @@ const Requests = () => {
   }, []);
   if (!requests) return;
 
-  if (requests.length === 0) return <h1 className="flex justify-center my-10"> No Requests Found</h1>;
+  if (requests.length === 0) 
+    return <h1 className="flex justify-center my-10"> No Requests Found</h1>;
 
   return (
     <div className="text-center my-10">
