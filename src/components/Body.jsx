@@ -28,6 +28,10 @@ const Body = () => {
     }
   };
 
+// Without useEffect, calling fetchUser() directly inside the component body 
+// would cause multiple API calls on every re-render.
+// useEffect ensures fetchUser runs only when the component first loads.
+
   useEffect(() => {
       fetchUser();
   }, []);

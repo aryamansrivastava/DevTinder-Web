@@ -5,6 +5,11 @@ import axios from "axios";
 import {BASE_URL} from "../utils/constants";
 import {addUser} from "../utils/userSlice";
 
+// useState use -> 
+// To manage form inputs dynamically (so that typing updates state).
+// The state also helps manage API responses and errors.
+// To control toast visibility for user feedback.
+
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
